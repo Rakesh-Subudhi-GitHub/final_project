@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeLeaf.org" th:replace="User/userbasepage::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Home</title>
+</head>
+<body>
+	
+<section>
+
+<div class="container">
+<div class="card my-3">
+<div class="card-body my-5">
+
+<div class="text-center">
+<img class="poticularContact_Img" th:src="@{'/image/'+contactlogo.png}" src="" alt="profile photo" />
+</div>
+
+<h1 class="text-center mt-3 text-secondary font-italic">
+Start Adding Your Contact on Cloud...
+
+</h1>
+
+<div class="text-center mt-3">
+<a th:href="@{/user/addcontact}" class="btn btn-primary text-uppercase">Add New Contact</a>
+</div>
+
+<hr/>
+<h3 class="my-3">Donate us</h3>
+<input id="payment_field" type="text" class="form-control my-2" placeholder="enter amount here"/>
+
+<div class="container text-center mt-3">
+<button class="btn btn-success" onclick="paymentStart()">PAY</button>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<script >
+
+$(document).ready(() =>{
+	
+	$(".item").removeClass("activeline");
+	$('#home-links').addClass("activeline");
+});
+
+
+
+</script>
+	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</section>
+</body>
+</html>
